@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">College Alert</string>
+
+    <!-- Login Screen -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+
+    <!-- Event List Screen -->
+    <string name="events">Events</string>
+    <string name="add">+ Add</string>
+    <string name="edit">edit</string>
+
+    <!-- Add Event Dialog -->
+    <string name="event_name">Event Name *</string>
+    <string name="date_time">Date and Time</string>
+    <string name="venue">Venue</string>
+    <string name="organized_by">Organized By</string>
+    <string name="category">Category</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Event Detail Screen -->
+    <string name="event_detail">Event Detail</string>
+    <string name="back">← Back</string>
+    <string name="label_name">Event Name</string>
+    <string name="label_date">📅 Date and Time</string>
+    <string name="label_venue">📍 Venue</string>
+    <string name="label_organizer">👤 Organized By</string>
+    <string name="label_category">🏷️ Category</string>
+    <string name="send_notification">Send Notification</string>
+    <string name="add_to_calendar">Add to Calendar</string>
+
+    <!-- Notifications Screen -->
+    <string name="notifications">Notifications</string>
+
+    <!-- Messages -->
+    <string name="event_added">Event add ho gaya!</string>
+    <string name="event_updated">Event update ho gaya!</string>
+    <string name="event_deleted">Event delete ho gaya!</string>
+    <string name="notification_sent">Notification send ho gayi!</string>
+    <string name="fill_name">Event name daalo!</string>
+    <string name="fill_fields">Email aur Password daalo!</string>
+    <string name="login_failed">Login failed! Email ya Password galat hai</string>
+    <string name="delete_confirm"> delete ho jayega!</string>
+    <string name="delete_event">Delete Event?</string>
+    <string name="delete">Delete</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="16dp">
+
+<EditText
+    android:id="@+id/etEventName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Event Name *"
+    android:layout_marginBottom="8dp"/>
+
+<EditText
+    android:id="@+id/etEventDate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Date and Time"
+    android:layout_marginBottom="8dp"/>
+
+<EditText
+    android:id="@+id/etEventVenue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Venue"
+    android:layout_marginBottom="8dp"/>
+
+<EditText
+    android:id="@+id/etEventOrganizer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Organized By"
+    android:layout_marginBottom="8dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="#757575"
+        android:textSize="12sp"
+        android:layout_marginBottom="4dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>

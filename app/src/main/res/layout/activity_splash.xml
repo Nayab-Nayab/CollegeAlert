@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#1A73E8">
+
+    <!-- Big Bell Emoji -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔔"
+        android:textSize="80sp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- App Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="College Alert"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Divider Line -->
+    <View
+        android:layout_width="60dp"
+        android:layout_height="3dp"
+        android:background="#FFFFFF"
+        android:alpha="0.6"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Tagline -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stay updated with campus events"
+        android:textColor="#BBDEFB"
+        android:textSize="14sp"
+        android:layout_marginBottom="80dp"/>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#FFFFFF"/>
+
+</LinearLayout>

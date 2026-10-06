@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#1A73E8"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Events"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <!-- Search -->
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="⌕"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:scaleX="1.5"
+            android:scaleY="1.4"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            />
+
+        <!-- Admin only: Add button -->
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:includeFontPadding="false"
+            android:gravity="center"/>
+
+        <!-- User only: Bell button -->
+        <Button
+            android:id="@+id/btnBell"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="🔔"
+            android:textSize="23sp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:includeFontPadding="false"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- Search Bar (hidden by default) -->
+    <LinearLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#1A73E8"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/btnSearchBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="X"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:includeFontPadding="false"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="Search events..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#BBDEFB"
+            android:textSize="16sp"
+            android:backgroundTint="#FFFFFF"
+            android:paddingStart="8dp"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+
+    <!-- Delete Bar — selection mode mein aata hai -->
+    <LinearLayout
+        android:id="@+id/deleteBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#D32F2F"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:visibility="gone"
+       >
+
+        <Button
+            android:id="@+id/btnCancelSelection"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="✕"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvSelectedCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0 selected"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:paddingStart="8dp"/>
+
+        <Button
+            android:id="@+id/btnDeleteSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="🗑"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <!-- Category Filter Chips -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:background="#FFFFFF"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <Button
+                android:id="@+id/chipAll"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="All"
+                android:textSize="12sp"
+                android:backgroundTint="#1A73E8"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/chipSports"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Sports"
+                android:textSize="12sp"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="#212121"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/chipAcademic"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Academic"
+                android:textSize="12sp"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="#212121"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/chipCultural"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#E0E0E0"
+                android:text="Cultural"
+                android:textColor="#212121"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/chipOther"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Other"
+                android:textSize="12sp"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="#212121"
+                android:layout_marginEnd="6dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- Events List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"/>
+
+
+
+</LinearLayout>
